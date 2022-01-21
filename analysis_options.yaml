@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**.config.dart"
+    - "**.freezed.dart"
+    - "**.g.dart"
+
+linter:
+  rules:
