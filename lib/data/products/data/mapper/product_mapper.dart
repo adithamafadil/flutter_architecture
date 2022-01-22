@@ -55,7 +55,7 @@ class ProductMapper {
       updatedAt: product.updatedAt,
       category: product.category,
       priceSign: product.priceSign,
-      qty: product.qty,
+      qty: product.qty ?? 1,
     );
   }
 

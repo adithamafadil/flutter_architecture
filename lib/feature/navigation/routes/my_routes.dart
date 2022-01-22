@@ -1,3 +1,4 @@
+import 'package:flutter_architecture/feature/screens/cart_screen/page/cart_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_architecture/constants/constants.dart';
 import 'package:flutter_architecture/feature/navigation/page/my_pages.dart';
@@ -20,6 +21,10 @@ class MyRoutes {
           name: MyConstants.routes.detail,
           page: () => DetailPage(),
           arguments: Get.arguments,
+        ),
+        MyNavigation(
+          name: MyConstants.routes.cart,
+          page: () => CartPage(),
         ),
       ];
 }

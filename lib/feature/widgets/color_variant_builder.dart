@@ -6,11 +6,13 @@ import 'package:flutter_architecture/feature/utils/grayscale_checker.dart';
 class ColorVariantBuilder extends StatelessWidget {
   final Product product;
   final double radius;
-  const ColorVariantBuilder({
-    Key? key,
-    required this.product,
-    this.radius = 12.5,
-  }) : super(key: key);
+  final bool isWithLabel;
+  const ColorVariantBuilder(
+      {Key? key,
+      required this.product,
+      this.radius = 12.5,
+      this.isWithLabel = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class ColorVariantBuilder extends StatelessWidget {
 
           return Container(
             height: radius * 2,
+            width: isWithLabel ? null : radius * 2,
             margin: const EdgeInsets.symmetric(horizontal: 4),
             padding: const EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
@@ -31,17 +34,20 @@ class ColorVariantBuilder extends StatelessWidget {
               color: color,
               border: Border.all(color: Colors.black38),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(4),
-              child: Text(
-                product.productColors[index].colourName ?? 'No Color Name',
-                style: TextStyle(
-                  color: GrayscaleChecker.isDarkColor(color)
-                      ? Colors.white
-                      : Colors.black,
-                ),
-              ),
-            ),
+            child: isWithLabel
+                ? Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Text(
+                      product.productColors[index].colourName ??
+                          'No Color Name',
+                      style: TextStyle(
+                        color: GrayscaleChecker.isDarkColor(color)
+                            ? Colors.white
+                            : Colors.black,
+                      ),
+                    ),
+                  )
+                : const SizedBox.shrink(),
           );
         },
       ),

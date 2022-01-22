@@ -1,6 +1,13 @@
 class MyConstants {
   static _Endpoint endpoint = const _Endpoint();
   static _MyRoutes routes = const _MyRoutes();
+  static _MyCachedKey cachedKey = const _MyCachedKey();
+}
+
+class _MyCachedKey {
+  const _MyCachedKey();
+
+  String get cartCachedKey => 'CART_CACHED_KEY';
 }
 
 class _MyApiUrl {
@@ -22,4 +29,5 @@ class _MyRoutes {
   String get initial => '/';
   String get home => '/home';
   String get detail => '/detail';
+  String get cart => '/cart';
 }

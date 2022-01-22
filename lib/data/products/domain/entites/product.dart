@@ -1,30 +1,30 @@
 import 'package:equatable/equatable.dart';
 
-class Product extends Equatable {
-  final int id;
-  final String brand;
-  final String name;
-  final String price;
-  final String description;
-  final int? qty;
-  final String? priceSign;
-  final String? category;
-  final String imageLink;
-  final String productType;
-  final String productApiUrl;
-  final List<ProductColor> productColors;
-  final DateTime createdAt;
-  final DateTime updatedAt;
+class Product {
+  int id;
+  String brand;
+  String name;
+  String price;
+  String description;
+  int qty;
+  String? priceSign;
+  String? category;
+  String imageLink;
+  String productType;
+  String productApiUrl;
+  List<ProductColor> productColors;
+  DateTime createdAt;
+  DateTime updatedAt;
 
-  const Product({
+  Product({
     required this.id,
     required this.brand,
     required this.name,
     required this.price,
     required this.description,
-    this.qty,
     this.priceSign,
     this.category,
+    this.qty = 1,
     required this.imageLink,
     required this.productType,
     required this.productApiUrl,
@@ -32,24 +32,6 @@ class Product extends Equatable {
     required this.createdAt,
     required this.updatedAt,
   });
-
-  @override
-  List<Object?> get props => [
-        id,
-        brand,
-        name,
-        price,
-        description,
-        qty,
-        priceSign,
-        category,
-        imageLink,
-        productType,
-        productApiUrl,
-        productColors,
-        createdAt,
-        updatedAt,
-      ];
 }
 
 class ProductColor extends Equatable {
