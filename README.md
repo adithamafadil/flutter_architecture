@@ -18,7 +18,8 @@ git clone https://github.com/fadirru/flutter-architecture/
 
 ## Module Stuctue
 
-[](https://miro.medium.com/max/1112/0*zUtZYiJ1bDTugOYY)
+<img src="https://miro.medium.com/max/1112/0*zUtZYiJ1bDTugOYY">
+
 When you want to create new `feature`, you have to aware to all `modules`. In this project, the modules are:
 
 1. Constants
@@ -31,29 +32,31 @@ When you want to create new `feature`, you have to aware to all `modules`. In th
    The data layer that contains all data flow cases you need. The structure will be:
 
    ```
-   ├─ module_name #Your module
-   ├─── data #Data module that CANNOT interact directly to your view/view model
-   ├─────── dto #Data Transfer Object to communicate to backend
-   ├─────── mapper #Mapper the data to entities
-   ├─────── repositories #Configuration your data from remote, local, and their implementation
-   ├─── domain #Here the interactor for your view and your data
-   ├─────── entities #The entities that will serve your data to your screen
-   ├─────── repositories #Abstract/contract of your repositories
-   ├─────── usecases #The interactor to access your repository to view model
+   ├─ module_name 
+   ├─── data 
+   ├─────── dto 
+   ├─────── mapper
+   ├─────── repositories
+   ├─── domain
+   ├─────── entities
+   ├─────── repositories 
+   ├─────── usecases
    ```
-
+   Data layer inside your module CANNOT be interacted with your view data/view. The only way you interact with them through domain layer
+   
 4. Feature
    Contains every feature that will shown at your view. Including:
-   a. Navigation
+   
+   4.1. Navigation
    Wrapper for your navigation and the route name will be declared there.
 
-   b. Screens
+   4.2. Screens
    The UI that will shown on user's device(s). Including its view and view model as controller.
 
-   c. Utils
+   4.3. Utils
    Utilities to support your codes
 
-   d. Widgets
+   4.4. Widgets
    Shared widgets that will be used at different screens.
 
 5. State
