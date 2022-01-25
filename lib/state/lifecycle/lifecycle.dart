@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/state_manager.dart';
 
 abstract class MyLifecycle<T extends GetxController> extends StatelessWidget {
@@ -24,7 +23,5 @@ abstract class MyLifecycle<T extends GetxController> extends StatelessWidget {
 }
 
 extension WorkerExtension on Worker {
-  void addTo(List<Worker> disposableWorkers) {
-    disposableWorkers.add(this);
-  }
+  void addTo(List<Worker> disposableWorkers) => disposableWorkers.add(this);
 }

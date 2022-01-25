@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture/feature/widgets/cart_icon.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:flutter_architecture/constants/constants.dart';
 import 'package:flutter_architecture/di/injection.dart';
 import 'package:flutter_architecture/data/products/domain/entites/product.dart';

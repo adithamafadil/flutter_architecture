@@ -1,9 +1,8 @@
 import 'package:flutter_architecture/data/cart/domain/entities/cart.dart';
 import 'package:flutter_architecture/data/cart/domain/usecases/get_cart_usecase.dart';
 import 'package:flutter_architecture/data/cart/domain/usecases/get_total_cart.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/set_cart_usecase.dart';
+import 'package:flutter_architecture/data/cart/domain/usecases/add_product_to_cart_usecase.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:injectable/injectable.dart';
 import 'package:flutter_architecture/data/products/domain/entites/product.dart';
 import 'package:flutter_architecture/data/products/domain/usecases/get_product_usecase.dart';
@@ -14,13 +13,13 @@ class HomeController extends GetxController {
   final GetProductUsecase getProduct;
   final GetCartUsecase getCartUsecase;
   final GetTotalCart getTotalCart;
-  final SetCartUsecase setCartUsecase;
+  final AddProductToCart addProductToCart;
 
   HomeController({
     required this.getProduct,
     required this.getCartUsecase,
     required this.getTotalCart,
-    required this.setCartUsecase,
+    required this.addProductToCart,
   });
 
   final Rx<ViewDataState<List<Product>>> productState =
@@ -43,7 +42,7 @@ class HomeController extends GetxController {
   }
 
   Future<void> addItemToCart(Product product) async {
-    await setCartUsecase.call(product);
+    await addProductToCart.call(product);
     update();
 
     getCart();

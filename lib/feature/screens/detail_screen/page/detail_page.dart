@@ -28,11 +28,7 @@ class DetailPage extends MyLifecycle<DetailController> {
       context: context,
       builder: (controller) => Scaffold(
         appBar: AppBar(
-          title: Text(
-            arguments.product.name,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(color: Colors.black),
-          ),
+          title: Text(arguments.product.name),
           actions: [
             Obx(() => CartIcon(
                   counterText: '${_controller.cart.value.products.length}',

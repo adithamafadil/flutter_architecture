@@ -31,4 +31,12 @@ class CartLocalRepository {
 
   Future<bool> deleteCart() async =>
       await _sharedPreferences.remove(MyConstants.cachedKey.cartCachedKey);
+
+  void removeProductAt(int index) async {
+    final cart = getCart();
+
+    cart.products.removeAt(index);
+
+    await setCart(cart);
+  }
 }

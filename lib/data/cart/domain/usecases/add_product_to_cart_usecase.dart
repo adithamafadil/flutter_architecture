@@ -4,12 +4,12 @@ import 'package:flutter_architecture/data/products/domain/entites/product.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
-class SetCartUsecase {
+class AddProductToCart {
   final CartRepository _repository;
   final GetCartUsecase _getCartUsecase;
-  const SetCartUsecase(this._repository, this._getCartUsecase);
+  const AddProductToCart(this._repository, this._getCartUsecase);
 
-  Future<bool> call(Product product) {
+  Future<bool> call(Product product) async {
     final cart = _getCartUsecase.call();
 
     if (cart.products.any((element) => element.id == product.id)) {
@@ -22,6 +22,6 @@ class SetCartUsecase {
       cart.products.add(product);
     }
 
-    return _repository.setCart(cart);
+    return await _repository.setCart(cart);
   }
 }

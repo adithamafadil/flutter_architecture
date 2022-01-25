@@ -20,4 +20,7 @@ class CartRepositoryImpl extends CartRepository {
 
   @override
   Future<bool> deleteCart() => _localRepository.deleteCart();
+
+  @override
+  void removeProductAt(int index) => _localRepository.removeProductAt(index);
 }
