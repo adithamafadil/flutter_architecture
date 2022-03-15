@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture/data/products/domain/entites/product.dart';
+import 'package:flutter_architecture/domain/products/entites/product.dart';
 import 'package:flutter_architecture/feature/utils/color_extension.dart';
 import 'package:flutter_architecture/feature/utils/grayscale_checker.dart';
 
@@ -7,12 +7,12 @@ class ColorVariantBuilder extends StatelessWidget {
   final Product product;
   final double radius;
   final bool isWithLabel;
-  const ColorVariantBuilder(
-      {Key? key,
-      required this.product,
-      this.radius = 12.5,
-      this.isWithLabel = false})
-      : super(key: key);
+  const ColorVariantBuilder({
+    Key? key,
+    required this.product,
+    this.radius = 12.5,
+    this.isWithLabel = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

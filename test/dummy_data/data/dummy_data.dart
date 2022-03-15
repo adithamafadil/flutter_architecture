@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter_architecture/data/products/data/dto/product_dto.dart';
-import 'package:flutter_architecture/data/products/data/mapper/product_mapper.dart';
-import 'package:flutter_architecture/data/products/domain/entites/product.dart';
+import 'package:flutter_architecture/data/products/dto/product_dto.dart';
+import 'package:flutter_architecture/data/products/mapper/product_mapper.dart';
+import 'package:flutter_architecture/domain/products/entites/product.dart';
 
 import '../helpers/read_json.dart';
 

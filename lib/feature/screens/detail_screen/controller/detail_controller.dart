@@ -1,8 +1,5 @@
-import 'package:flutter_architecture/data/cart/domain/entities/cart.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/get_cart_usecase.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/get_total_cart.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/add_product_to_cart_usecase.dart';
-import 'package:flutter_architecture/data/products/domain/entites/product.dart';
+import 'package:flutter_architecture/domain/cart/cart_domain.dart';
+import 'package:flutter_architecture/domain/products/entites/product.dart';
 import 'package:get/state_manager.dart';
 import 'package:injectable/injectable.dart';
 

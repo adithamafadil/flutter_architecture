@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture/data/products/domain/entites/product.dart';
 import 'package:flutter_architecture/di/injection.dart';
+import 'package:flutter_architecture/domain/products/entites/product.dart';
 import 'package:flutter_architecture/feature/screens/cart_screen/controller/cart_controller.dart';
 import 'package:flutter_architecture/feature/screens/cart_screen/widgets/add_decrease_button.dart';
 import 'package:flutter_architecture/state/lifecycle/lifecycle.dart';

@@ -1,10 +1,5 @@
-import 'package:flutter_architecture/data/cart/domain/entities/cart.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/add_product_to_cart_usecase.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/decrease_cart_usecase.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/delete_cart_usecase.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/get_cart_usecase.dart';
-import 'package:flutter_architecture/data/cart/domain/usecases/remove_product_at_usecase.dart';
-import 'package:flutter_architecture/data/products/domain/entites/product.dart';
+import 'package:flutter_architecture/domain/cart/cart_domain.dart';
+import 'package:flutter_architecture/domain/products/entites/product.dart';
 import 'package:flutter_architecture/state/view_data/view_data_state.dart';
 import 'package:get/get_rx/get_rx.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';

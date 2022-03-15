@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_architecture/domain/products/entites/product.dart';
 import 'package:flutter_architecture/feature/widgets/cart_icon.dart';
 import 'package:get/get.dart';
 import 'package:flutter_architecture/constants/constants.dart';
 import 'package:flutter_architecture/di/injection.dart';
-import 'package:flutter_architecture/data/products/domain/entites/product.dart';
 import 'package:flutter_architecture/feature/screens/detail_screen/arguments/detail_arguments.dart';
 import 'package:flutter_architecture/feature/screens/home_screen/controller/home_controller.dart';
 import 'package:flutter_architecture/feature/widgets/color_variant_builder.dart';
